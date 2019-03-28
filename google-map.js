@@ -27,11 +27,11 @@ kentStateParkingMap = new google.maps.Map(document.getElementById('map'), mapOpt
 // Use the latitude and longitude arrays that store the position of the marker
 // along with the name and button number using the object constructor
 var parkingLots = [
-  [ "R2 Business Administration", 41.1490272,-81.3488268, 1],
-  [ "R1 Rockwell Hall", 41.1529386,-81.3494021, 2],
-  [ "R3 Terrace Hall", 41.1526778,-81.3468987,3],
-  [ "R6 Fletcher Hall", 41.1482647,-81.3423212,4],
-  [ "Center for the Performing Arts", 41.1529188,-81.342836, 5]
+  [ "R2 Business Administration", 41.1490272,-81.3488268, 1, "475 Terrace Dr"],
+  [ "R1 Rockwell Hall", 41.1529386,-81.3494021, 2, "515 Hilltop Dr"],
+  [ "R3 Terrace Hall", 41.1526778,-81.3468987, 3, ""],
+  [ "R6 Fletcher Hall", 41.1482647,-81.3423212, 4, "12 Petrarca Dr"],
+  [ "Center for the Performing Arts", 41.1529188,-81.342836, 5, "1325 Theatre Dr"]
 ];
 
 // Implement New infowindow
@@ -57,7 +57,7 @@ var marker = new google.maps.Marker({
   // once the interpreter comes across it.
   google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          var information = parkingLots[i][0] + '<br />' + "Kent, OH, 44243";
+          var information = parkingLots[i][0] + '<br />' + parkingLots[i][4] + ", Kent, OH, 44243";
           infowindow.setContent(information);
           infowindow.open(kentStateParkingMap, marker);
           let btn = document.getElementsByClassName("parking_content")[i];
