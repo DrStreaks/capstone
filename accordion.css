@@ -1,10 +1,6 @@
-html, body {
-  width: 100%;
-}
-
 nav {
-  width: 330px;
-  margin: 0px 20px;
+  width: 500px;
+  padding: 0;
 }
 
 button.parking_btn {
@@ -28,19 +24,4 @@ button.parking_btn:hover {
   transition: max-height 0.2s ease-in-out;
 }
 
-.border_on {
-  border: 1px solid black;
-}
-
-.content_wrapper {
-  display: grid;
-  grid-template-columns: minmax(min-content, 650px) 330px;
-  justify-content: center;
-}
-
-/* ------------------------- MAP -------------------------------- */
-
-#map {
-  height: 500px;
-  width: 650px;
-}
+/* --------------------------------------------------------- */

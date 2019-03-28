@@ -29,46 +29,61 @@ kentStateParkingMap = new google.maps.Map(document.getElementById('map'), mapOpt
 var parkingLots = [
   {
     pos: new google.maps.LatLng(41.1490272,-81.3488268),
-    title: "#ofMeters",
-    lbl: "R2 Business Administration"
+    title: "R2 Business Administration"
   },
   {
     pos: new google.maps.LatLng(41.1529386,-81.3494021),
-    title: "#ofMeters",
-    lbl: "R1 Rockwell Hall"
+    title: "R1 Rockwell Hall"
   },
   {
     pos: new google.maps.LatLng(41.1526778,-81.3468987),
-    title: "#ofMeters",
-    lbl: "R3 Terrace Hall"
+    title: "R3 Terrace Hall"
   },
   {
     pos: new google.maps.LatLng(41.1482647,-81.3423212),
-    title: "#ofMeters",
-    lbl: "R6 Fletcher Hall"
+    title: "R6 Fletcher Hall"
   },
   {
     pos: new google.maps.LatLng(41.1529188,-81.342836),
-    title: "#ofMeters",
-    lbl: "Center for the Performing Arts"
+    title: "Center for the Performing Arts"
   }
 ];
 
 for (var i = 0; i < parkingLots.length; i++) {
 // The google.maps.Marker() constructor creates a marker object. It takes one parameter:
 // an object that contains literal notation.
-var startPosition = new google.maps.Marker({
+var marker = new google.maps.Marker({
   // Position is the object storing the markers location (pinLocation)
   position: parkingLots[i].pos,
   // Map is the map that the marker should be added to.
   map: kentStateParkingMap,
   // Icon is the path to the image of the icon that will be displayed
-  icon: '',
+  icon: { url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" },
   title: parkingLots[i].title,
-  label: parkingLots[i].lbl,
   animation: google.maps.Animation.DROP
   });
+
+  ////////////////////////////////////////////////////////////////////////////////
+  var infowindow = new google.maps.InfoWindow({
+    content: marker.title
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    let btn = document.getElementsByClassName("parking_content")[0];
+    if (btn.style.maxHeight > "0px") {
+      //closed
+      btn.style.maxHeight = "0px";
+      infowindow.close();
+    } else {
+    // Open window
+    infowindow.open(map, marker);
+    // Open content button
+    btn.style.maxHeight = "300px";
+  }
+  });
+  ////////////////////////////////////////////////////////////////////////////////
 };
+
 }
 
 // Step 2. The loadScript() creates a <script> element to load the Google Maps API. When it has loaded,
@@ -84,3 +99,27 @@ function loadScript() {
 
 // Step 1. When the page is loaded, the onload event will call the loadScript() Function
 window.onload = loadScript;
+
+////////////////////////////////////////////////////////////////////////////////
+// Get locations of all parking lots/meters
+var locationsArray = document.getElementsByClassName("parking_btn");
+
+// Loop through all locations
+for (var i = 0; i < locationsArray.length; i++){
+  // Run the function on the button that was clicked
+  locationsArray[i].onclick = function () {
+    // Navigate the DOM to find the child and get the element
+    var info = this.nextElementSibling;
+    // If the height is greater than 0px than it is OPEN
+    if (info.style.maxHeight > "0px") {
+      // Close the content window
+      info.style.maxHeight = "0px";
+    } else {
+      // Open content window
+      info.style.maxHeight = info.scrollHeight + "px";
+    }
+    // end of if statement
+  };
+  // end of function
+}
+// end of loop
