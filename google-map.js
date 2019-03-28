@@ -98,12 +98,10 @@ function open_close_nav() {
   if (info.style.maxHeight > "0px") {
     // Close the content window
     info.style.maxHeight = "0px";
-    /////////////////////////////
     infowindow.close();
   } else {
     // Open content window
     info.style.maxHeight = info.scrollHeight + "px";
-    /////////////////////////////
     infowindow.open(kentStateParkingMap, marker);
   }
 };
@@ -117,4 +115,3 @@ for (var i = 0; i < locationsArray.length; i++){
   // Run the function on the button that was clicked
   locationsArray[i].onclick = open_close_nav();
 }
-// end of loop
