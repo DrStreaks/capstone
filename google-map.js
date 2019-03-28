@@ -69,14 +69,14 @@ var marker = new google.maps.Marker({
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    let btn = document.getElementsByClassName("parking_content")[0];
+    let btn = document.getElementsByClassName("parking_content")[4];
     if (btn.style.maxHeight > "0px") {
       //closed
       btn.style.maxHeight = "0px";
       infowindow.close();
     } else {
     // Open window
-    infowindow.open(map, marker);
+    infowindow.open(kentStateParkingMap, marker);
     // Open content button
     btn.style.maxHeight = "300px";
   }
@@ -101,25 +101,31 @@ function loadScript() {
 window.onload = loadScript;
 
 ////////////////////////////////////////////////////////////////////////////////
+// This function opens and closes the location buttons
+function open_close_nav() {
+  // Navigate the DOM to find the child and get the element
+  var info = this.nextElementSibling;
+  // If the height is greater than 0px than it is OPEN
+  if (info.style.maxHeight > "0px") {
+    // Close the content window
+    info.style.maxHeight = "0px";
+    /////////////////////////////
+    infowindow.close();
+  } else {
+    // Open content window
+    info.style.maxHeight = info.scrollHeight + "px";
+    /////////////////////////////
+    infowindow.open(kentStateParkingMap, marker);
+  }
+};
+
+////////////////////////////////////////////////////////////////////////////////
 // Get locations of all parking lots/meters
 var locationsArray = document.getElementsByClassName("parking_btn");
 
 // Loop through all locations
 for (var i = 0; i < locationsArray.length; i++){
   // Run the function on the button that was clicked
-  locationsArray[i].onclick = function () {
-    // Navigate the DOM to find the child and get the element
-    var info = this.nextElementSibling;
-    // If the height is greater than 0px than it is OPEN
-    if (info.style.maxHeight > "0px") {
-      // Close the content window
-      info.style.maxHeight = "0px";
-    } else {
-      // Open content window
-      info.style.maxHeight = info.scrollHeight + "px";
-    }
-    // end of if statement
-  };
-  // end of function
+  locationsArray[i].onclick = open_close_nav();
 }
 // end of loop
