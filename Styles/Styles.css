@@ -1,0 +1,280 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: NationalLight,"Helvetica Neue", Helvetica,Arial,sans-serif;
+}
+
+h4 {
+  color: yellow;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  padding: 3px;
+}
+
+a {
+  color: white;
+}
+
+#index_header, #index_footer {
+  border: .1em solid black;
+  background-color: rgb(0, 38, 100);
+}
+
+#index_header {
+  height: 94px;
+}
+
+.index_logo {
+  width: 255px;
+  padding: 1em;
+}
+
+#index_header {
+  border-bottom: 3px solid yellow;
+}
+
+#index_footer {
+  padding-left: 21px;
+  padding-top: 10px;
+  border-top: 3px solid yellow;
+}
+
+#hamber_menu {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+}
+
+#content_area {
+  height: 425px;
+}
+
+/* Screen Min-Widths: 761px */
+@media screen and (min-width: 761px) {
+  #index_footer {
+    display: grid;
+    grid:
+      'info res mail contact'
+      'info res street social'
+      'info res . .';
+    justify-content: space-around;
+    height: 409px;
+  }
+
+  i {
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .footer_info {
+    grid-area: info;
+  }
+
+  .footer_camp_res {
+    grid-area: res;
+  }
+
+  .footer_mail_address {
+    grid-area: mail;
+  }
+
+  .footer_str_address {
+    grid-area: street;
+  }
+
+  .footer_contact {
+    grid-area: contact;
+  }
+
+  .footer_social_media {
+    grid-area: social;
+    padding-top: 26px;
+  }
+
+  .social_media_container {
+    display: flex;
+    flex-direction: row;
+  }
+
+.footer_logo_container {
+  position: relative;
+  bottom: -6px;
+  left: -82px;
+  }
+}
+/* ---- Min-Widths: 761px ---- */
+
+
+/* Screen Max-Widths: 760px */
+@media screen and (max-width: 1100px) {
+  #index_footer {
+    display: grid;
+    grid:
+      'info res'
+      'info res'
+      'mail street'
+      'mail street'
+      'contact social'
+      'contact social';
+    justify-content: space-around;
+    height: auto;
+  }
+
+  i {
+    font-size: 30px;
+  }
+
+  .footer_info {
+    grid-area: info;
+  }
+
+  .footer_camp_res {
+    grid-area: res;
+  }
+
+  .footer_mail_address {
+    grid-area: mail;
+  }
+
+  .footer_str_address {
+    grid-area: street;
+  }
+
+  .footer_contact {
+    grid-area: contact;
+  }
+
+  .footer_social_media {
+    grid-area: social;
+    padding-top: 26px;
+  }
+
+  .social_media_container {
+    display: flex;
+    flex-direction: row;
+  }
+
+.footer_logo_container {
+  position: relative;
+  left: 152px;
+  }
+}
+/* ---- Max-Widths: 768px ---- */
+
+/* Screen Max-Widths: 500px */
+@media screen and (max-width: 560px) {
+  #index_footer {
+    display: grid;
+    grid:
+      'info'
+      'res'
+      'mail'
+      'street'
+      'contact'
+      'social';
+    justify-content: space-around;
+    height: auto;
+  }
+
+  i {
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .footer_info {
+    grid-area: info;
+  }
+
+  .footer_camp_res {
+    grid-area: res;
+  }
+
+  .footer_mail_address {
+    grid-area: mail;
+  }
+
+  .footer_str_address {
+    grid-area: street;
+  }
+
+  .footer_contact {
+    grid-area: contact;
+  }
+
+  .footer_social_media {
+    grid-area: social;
+    padding-top: 26px;
+  }
+
+  .social_media_container {
+    display: flex;
+    flex-direction: row;
+  }
+
+.footer_logo_container {
+  position: relative;
+  left: 21px;
+  }
+}
+/* ---- Max-Widths: 500px ---- */
+/* -------------------------------------------------------------------------- */
+
+nav {
+  width: 330px;
+  margin: 0px 20px;
+}
+
+button.parking_btn {
+  width: 100%;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin: .2em 0em;
+  text-align: left;
+}
+
+button.parking_btn:hover {
+  background-color: rgba(142, 178, 237, 0.3);
+}
+
+.parking_content {
+  padding: 0px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.border_on {
+  border: 1px solid black;
+}
+
+.content_wrapper {
+  display: grid;
+  grid-template-columns: minmax(min-content, 650px) 330px;
+  justify-content: center;
+}
+
+/* ------------------------- MAP -------------------------------- */
+
+#map {
+  height: 500px;
+  width: 650px;
+}
