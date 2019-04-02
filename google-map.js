@@ -23,7 +23,7 @@ function init(){
 var kentStateParkingMap;
 kentStateParkingMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-/*--------------- Test Code -------------------- */
+/*--------------- Test Code --------------------
 // Use the latitude and longitude arrays that store the position of the marker
 // along with the name and button number using the object constructor
 var parkingLots = [
@@ -33,34 +33,41 @@ var parkingLots = [
   [ "R6 Fletcher Hall", 41.1482647,-81.3423212, 4, "12 Petrarca Dr"],
   [ "Center for the Performing Arts", 41.1529188,-81.342836, 5, "1325 Theatre Dr"]
 ];
+*/
 
+////////////////////////////////////////////////////////////////////////////////
+// AJAX code in JQUERY to get data from the JSON file to populate the Google API
+$.getJSON('index.json', function(data_from_file){
 // Implement New infowindow
 var infowindow = new google.maps.InfoWindow();
 var marker, i;
 
-for (i = 0; i < parkingLots.length; i++) {
+$.each(data_from_file, function(key, value) {
 // The google.maps.Marker() constructor creates a marker object. It takes one parameter:
 // an object that contains literal notation.
 var marker = new google.maps.Marker({
   // Position is the array storing the markers location (parkingLots)
-  position: new google.maps.LatLng(parkingLots[i][1], parkingLots[i][2]),
+  position: new google.maps.LatLng(value.Latitude, value.Longitude),
   // Map is the map that the marker should be added to.
   map: kentStateParkingMap,
   // Icon is the path to the image of the icon that will be displayed
   icon: { url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" },
-  title: parkingLots[i][0],
+  title: value.Name,
   animation: google.maps.Animation.DROP
   });
 
+  // Dynamically populate the Name of the buildings
+  let title = document.getElementsByClassName("parking_btn")[key];
+  title.innerHTML = marker.title;
 
   // IIFE or Immediately Invoked Function Expression is a function that is fired
   // once the interpreter comes across it.
-  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+  google.maps.event.addListener(marker, 'click', (function(marker) {
         return function() {
-          var information = parkingLots[i][0] + '<br />' + parkingLots[i][4] + ", Kent, OH, 44243";
+          var information = value.Name + '<br />' + value.Address;
           infowindow.setContent(information);
           infowindow.open(kentStateParkingMap, marker);
-          let btn = document.getElementsByClassName("parking_content")[i];
+          let btn = document.getElementsByClassName("parking_content")[key];
           if (btn.style.maxHeight > "0px") {
             //closed
             btn.style.maxHeight = "0px";
@@ -73,7 +80,8 @@ var marker = new google.maps.Marker({
         }
         }
       })(marker, i));
-};
+});
+});
 }
 
 // Step 2. The loadScript() creates a <script> element to load the Google Maps API. When it has loaded,

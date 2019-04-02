@@ -33,6 +33,7 @@
 <p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="accordion.js"></script>
 </nav>
 </div>
