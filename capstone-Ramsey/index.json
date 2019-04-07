@@ -1,0 +1,32 @@
+[
+  {
+    "Name": "Business",
+    "Latitude": "41.14924832",
+    "Longitude": "-81.34914407",
+    "Address": "613 E Summit St, Kent, OH 44240"
+  },
+  {
+    "Name": "Kent",
+    "Latitude": "41.15116743",
+    "Longitude": "-81.34783114",
+    "Address": "Art Annex, Kent, OH 44243"
+  },
+  {
+    "Name": "Moulton",
+    "Latitude": "41.15284554",
+    "Longitude": "-81.34504089",
+    "Address": "Terrace Hall, Kent, OH 44243"
+  },
+  {
+    "Name": "Center for the Performing Arts",
+    "Latitude": "41.15225943",
+    "Longitude": "-81.33981127",
+    "Address": "Center for the Performing Arts, 1325 Theatre Dr, Kent, OH 44243"
+  },
+  {
+    "Name": "Prentice",
+    "Latitude": "41.15189667",
+    "Longitude": "-81.34226609",
+    "Address": "KSU Midway at Verder Hall SB, Kent, OH 44243"
+  }
+]

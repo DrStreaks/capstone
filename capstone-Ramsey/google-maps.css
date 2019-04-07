@@ -1,0 +1,43 @@
+
+nav {
+  width: 330px;
+  margin: 0px 20px;
+}
+
+button.parking_btn {
+  width: 100%;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin: .2em 0em;
+  text-align: left;
+}
+
+button.parking_btn:hover {
+  background-color: rgba(142, 178, 237, 0.3);
+}
+
+.parking_content {
+  padding: 0px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.border_on {
+  border: 1px solid black;
+}
+
+.content_wrapper {
+  display: grid;
+  grid-template-columns: minmax(min-content, 650px) 330px;
+  justify-content: center;
+}
+
+/* ------------------------- MAP -------------------------------- */
+
+#map {
+  height: 500px;
+  width: 650px;
+}
