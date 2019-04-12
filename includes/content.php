@@ -2,32 +2,33 @@
 <div id="map">
 <script type="text/javascript" src="google-map.js"></script>
 </div>
+
 <nav class="menu">
-<button class="parking_btn">R2 Business Administration</button>
+<button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
 <p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
-<button class="parking_btn">R1 Rockwell Hall</button>
+<button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
 <p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
-<button class="parking_btn">R3 Terrace Hall</button>
+<button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
 <p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
-<button class="parking_btn">R6 Fletcher Hall</button>
+<button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
 <p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
-<button class="parking_btn">Center for the Performing Arts</button>
+<button class="parking_btn"></button>
 <div class="parking_content" id="window">
 <p>Availability:</p>
 <p>Meters Availabile:</p>
@@ -36,5 +37,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="accordion.js"></script>
 </nav>
+
+
 </div>
 </body>

@@ -56,9 +56,11 @@ var marker = new google.maps.Marker({
   animation: google.maps.Animation.DROP
   });
 
+
   // Dynamically populate the Name of the buildings
   let title = document.getElementsByClassName("parking_btn")[key];
   title.innerHTML = marker.title;
+
 
   // IIFE or Immediately Invoked Function Expression is a function that is fired
   // once the interpreter comes across it.
