@@ -57,10 +57,12 @@ var marker = new google.maps.Marker({
   });
 
 
+
   // Dynamically populate the Name of the buildings
   let title = document.getElementsByClassName("parking_btn")[key];
   title.innerHTML = marker.title;
-
+  let text = title.nextElementSibling.lastChild;
+  text.nodeValue = value.Address;
 
   // IIFE or Immediately Invoked Function Expression is a function that is fired
   // once the interpreter comes across it.
@@ -76,12 +78,14 @@ var marker = new google.maps.Marker({
             infowindow.close();
           } else {
           // Open window
-          infowindow.open(kentStateParkingMap, marker);
+          // infowindow.open(kentStateParkingMap, marker);
+
           // Open content button
           btn.style.maxHeight = "300px";
+
         }
         }
-      })(marker, i));
+      })(marker));
 });
 });
 }
