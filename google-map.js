@@ -22,19 +22,6 @@ function init() {
   var kentStateParkingMap;
   kentStateParkingMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-  /*--------------- Test Code --------------------
-  // Use the latitude and longitude arrays that store the position of the marker
-  // along with the name and button number using the object constructor
-  var parkingLots = [
-    [ "R2 Business Administration", 41.1490272,-81.3488268, 1, "475 Terrace Dr"],
-    [ "R1 Rockwell Hall", 41.1529386,-81.3494021, 2, "515 Hilltop Dr"],
-    [ "R3 Terrace Hall", 41.1526778,-81.3468987, 3, ""],
-    [ "R6 Fletcher Hall", 41.1482647,-81.3423212, 4, "12 Petrarca Dr"],
-    [ "Center for the Performing Arts", 41.1529188,-81.342836, 5, "1325 Theatre Dr"]
-  ];
-  */
-
-  ////////////////////////////////////////////////////////////////////////////////
   // AJAX code in JQUERY to get data from the JSON file to populate the Google API
   $.getJSON('index.json', function(data_from_file) {
     // Implement New infowindow
@@ -62,8 +49,6 @@ function init() {
         title: value.Name,
         animation: google.maps.Animation.DROP
       });
-
-
 
       // Dynamically populate the Name of the buildings
       let title = document.getElementsByClassName("parking_btn")[key];
