@@ -34,9 +34,9 @@ function init() {
       var image = "";
 
       if (value.Available == "Empty") {
-        image = "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
-      } else {
         image = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
+      } else {
+        image = "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
       }
 
       var marker = new google.maps.Marker({
@@ -55,6 +55,11 @@ function init() {
       title.innerHTML = marker.title;
       let text = title.nextElementSibling.lastChild;
       text.nodeValue = value.Address;
+      let availability = document.getElementsByClassName("parking_content")[key];
+      let spots = availability.firstChild.nextSibling.nextSibling;
+      spots.nodeValue = value.Available;
+      let metersAvailabile = spots.nextSibling.nextSibling;
+      metersAvailabile.nodeValue = value.Meters + " Availabile";
 
       // IIFE or Immediately Invoked Function Expression is a function that is fired
       // once the interpreter comes across it.
@@ -69,9 +74,6 @@ function init() {
             btn.style.maxHeight = "0px";
             infowindow.close();
           } else {
-            // Open window
-            // infowindow.open(kentStateParkingMap, marker);
-
             // Open content button
             btn.style.maxHeight = "300px";
 
