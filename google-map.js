@@ -8,7 +8,7 @@ function init() {
     //Type of map to be displayed
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     //Zoom level for the map: range 0 - 16
-    zoom: 15,
+    zoom: 16,
     // Manipulates the appearance of the Zoom Controls.
     zoomControl: true,
     zoomControlOptions: {
