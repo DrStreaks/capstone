@@ -2,8 +2,7 @@
 <div id="map">
 <script type="text/javascript" src="google-map.js"></script>
 </div>
-
-<nav class="menu">
+<nav>
 <button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>

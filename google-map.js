@@ -4,11 +4,11 @@ function init() {
   //Setup the map options object with three pieces of data
   var mapOptions = {
     //Center of the map in latitude and longitude
-    center: new google.maps.LatLng(41.151773, -81.3453001),
+    center: new google.maps.LatLng(41.150933,-81.344227),
     //Type of map to be displayed
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     //Zoom level for the map: range 0 - 16
-    zoom: 16,
+    zoom: 15,
     // Manipulates the appearance of the Zoom Controls.
     zoomControl: true,
     zoomControlOptions: {

@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: NationalLight,"Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-family: NationalLight, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h4 {
@@ -38,15 +38,13 @@ a {
 
 #index_header {
   height: 94px;
+  width: 100%;
+  border-bottom: 3px solid yellow;
 }
 
 .index_logo {
-  width: 255px;
+  width: 200px;
   padding: 1em;
-}
-
-#index_header {
-  border-bottom: 3px solid yellow;
 }
 
 #index_footer {
@@ -64,10 +62,13 @@ a {
 
 #content_area {
   height: 425px;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
 }
 
 nav {
-  width: 330px;
+  width: 100%;
   margin: 0px 20px;
 }
 
@@ -98,13 +99,14 @@ button.parking_btn:hover {
 
 .content_wrapper {
   display: grid;
-  grid-template-columns: minmax(min-content, 650px) 330px;
-  justify-content: center;
+  grid-template-columns: minmax(65%, 72%) minmax(10%, 20%);
+  justify-content: space-evenly;
 }
 
 #map {
   height: 500px;
-  width: 650px;
+  width: 100%;
+  margin-left: 0px;
 }
 
 footer {
@@ -157,16 +159,22 @@ i {
 }
 
 .footer_logo_container {
-position: relative;
-bottom: -6px;
-left: -82px;
+  position: relative;
+  bottom: -6px;
+  left: -82px;
 }
 
 @media only screen and (max-width: 800px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 
   #map {
-    height: 500px;
+    height: 450px;
     width: 100%;
+    margin-left: auto;
   }
 
   .content_wrapper {
@@ -225,9 +233,9 @@ left: -82px;
     flex-direction: row;
   }
 
-.footer_logo_container {
-  position: relative;
-  left: 195px;
+  .footer_logo_container {
+    position: relative;
+    left: 195px;
   }
 }
 
