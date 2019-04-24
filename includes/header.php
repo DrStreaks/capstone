@@ -10,19 +10,20 @@
     <header>
       <div id="index_header">
         <img class="index_logo" src="Images\kent_state Horizontal_White.png" alt="Kent State Horizontal White Logo">
-        <div id="parking_services"><a href="#">Parking and Transit Services</a></div>
-        <i class="fas fa-bars fa-2x" id="hamber_menu"></i>
+        <div id="parking_services"><a href="https://www.kent.edu/parking">Parking and Transit Services</a></div>
+
+        <i class="fas fa-bars fa-2x" id="menu_button"></i>
         </div>
         <span class="menu_wrapper">
           <ul class="menu_content">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Students</a></li>
-            <li><a href="#">Faculty/Staff</a></li>
-            <li><a href="#">Visitor Parking</a></li>
-            <li><a href="#">Event Parking</a></li>
-            <li><a href="#">Department Permits</a></li>
-            <li><a href="#">Maps/Directions</a></li>
-            <li><a href="#">Tickets/Enforcement</a></li>
+            <li><a href="https://www.kent.edu/parking/about">About</a></li>
+            <li><a href="https://www.kent.edu/parking/student-parking">Students</a></li>
+            <li><a href="https://www.kent.edu/parking/facultystaff-parking">Faculty/Staff</a></li>
+            <li><a href="https://www.kent.edu/parking/visitor-parking">Visitor Parking</a></li>
+            <li><a href="https://www.kent.edu/parking/event-parking">Event Parking</a></li>
+            <li><a href="https://www.kent.edu/parking/department-permits">Department Permits</a></li>
+            <li><a href="https://www.kent.edu/parking/maps-directions">Maps/Directions</a></li>
+            <li><a href="https://www.kent.edu/parking/ticketsenforcement">Tickets/Enforcement</a></li>
           </ul>
         </span>
     </header>

@@ -54,6 +54,7 @@ header, #index_footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 
 .index_logo {
@@ -83,7 +84,7 @@ header, #index_footer {
   border-top: 3px solid yellow;
 }
 
-#hamber_menu {
+#menu_button {
   color: white;
 }
 
@@ -201,7 +202,7 @@ i {
     overflow-x: hidden;
   }
 
-  #hamber_menu {
+  #menu_button {
     position: relative;
     top: 3px;
     right: 25px;
