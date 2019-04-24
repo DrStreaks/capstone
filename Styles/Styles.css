@@ -238,9 +238,7 @@ i {
   }
 
   #menu_button {
-    position: relative;
-    top: 3px;
-    right: 25px;
+    display: none;
   }
 
   #map {

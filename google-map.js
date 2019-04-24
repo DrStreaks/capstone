@@ -42,9 +42,7 @@ function init() {
       var marker = new google.maps.Marker({
         // Position is the array storing the markers location (parkingLots)
         position: new google.maps.LatLng(value.Latitude, value.Longitude),
-        // Map is the map that the marker should be added to.
         map: kentStateParkingMap,
-        // Icon is the path to the image of the icon that will be displayed
         icon: image,
         title: value.Name,
         animation: google.maps.Animation.DROP
@@ -63,7 +61,7 @@ function init() {
       // once the interpreter comes across it.
       google.maps.event.addListener(marker, 'click', (function(marker) {
         return function() {
-          var information = value.Name + '<br />' + value.Address;
+          var information = '<h2>'+ value.Name + '</h2>' + value.Address + '<br /> <br />' + 'Is currently: ' + value.Available;
           infowindow.setContent(information);
           infowindow.open(kentStateParkingMap, marker);
           let btn = document.getElementsByClassName("parking_content")[key];
