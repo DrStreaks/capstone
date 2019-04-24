@@ -13,23 +13,43 @@
         <div id="parking_services"><a href="https://www.kent.edu/parking">Parking and Transit Services</a></div>
         <div id="menu_button">
           <ul id="menu_button_wrapper">
-            <li><i class="fas fa-bolt fa-lg"></i></li>
-            <li><i class="fas fa-calendar fa-lg"></i></li>
-            <li><i class="fas fa-phone fa-lg"></i></li>
-            <li><i class="fas fa-map-marker fa-lg"></i></li>
-            <li><i class="fas fa-search fa-lg"></i></li>
-            <li>APPLY</li>
-            <li>VISIT</li>
-            <li>GIVE NOW</li>
+            <li><a href="https://login.kent.edu/"><i class="fas fa-bolt fa-lg"></i></a></li>
+            <li><a href="https://www.kent.edu/calendars"><i class="fas fa-calendar fa-lg"></i></a></li>
+            <li><a href="https://keys.kent.edu:44220/ePROD/bwgkphon.p_viewpeopledirectory"><i class="fas fa-phone fa-lg"></i></a></li>
+            <li><a href="https://map.concept3d.com/?id=568#!ct/5500"><i class="fas fa-map-marker fa-lg"></i></a></li>
+            <li><a href="https://www.kent.edu/calendars"><i class="fas fa-search fa-lg"></i></a></li>
+            <li id="button_radius"><a href="https://www.kent.edu/admissions/apply">APPLY</a></li>
+            <li id="button_radius"><a href="https://www.kent.edu/admissions/undergraduate/schedule-visit">VISIT</a></li>
+            <li id="button_radius"><a href="https://www.kent.edu/advancement/give-online-now?r=2739">GIVE NOW</a></li>
           </ul>
         </div>
       </div>
         <span class="menu_wrapper">
           <ul class="menu_content">
-            <li><a href="https://www.kent.edu/parking/about">About</a></li>
+            <div class="dropdown">
+              <li><a href="https://www.kent.edu/parking/about">About</a></li>
+              <div class="dropdown-content">
+              <p>Hello World!</p>
+              </div>
+            </div>
+            <div class="dropdown">
             <li><a href="https://www.kent.edu/parking/student-parking">Students</a></li>
+            <div class="dropdown-content">
+            <p>Hello World!</p>
+            </div>
+            </div>
+            <div class="dropdown">
             <li><a href="https://www.kent.edu/parking/facultystaff-parking">Faculty/Staff</a></li>
+            <div class="dropdown-content">
+            <p>Hello World!</p>
+            </div>
+            </div>
+            <div class="dropdown">
             <li><a href="https://www.kent.edu/parking/visitor-parking">Visitor Parking</a></li>
+            <div class="dropdown-content">
+            <p>Hello World!</p>
+            </div>
+            </div>
             <li><a href="https://www.kent.edu/parking/event-parking">Event Parking</a></li>
             <li><a href="https://www.kent.edu/parking/department-permits">Department Permits</a></li>
             <li><a href="https://www.kent.edu/parking/maps-directions">Maps/Directions</a></li>
