@@ -1,36 +1,28 @@
-// Step 3. initialize loads the map into the HTML page. First it creates a mapOptions
-// object with three properties.
+/*
+ * initialize loads the map into the HTML page. First it creates a mapOptions
+ */
 function init() {
-  //Setup the map options object with three pieces of data
-  var mapOptions = {
-    //Center of the map in latitude and longitude
+  var mapOptions = {                                                                      //Setup the map options object with three pieces of data
     center: new google.maps.LatLng(41.150933,-81.344227),
-    //Type of map to be displayed
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    //Zoom level for the map: range 0 - 16
-    zoom: 15,
-    // Manipulates the appearance of the Zoom Controls.
+    mapTypeId: google.maps.MapTypeId.ROADMAP,                                             //Type of map to be displayed
+    zoom: 15,                                                                             //Zoom level for the map: range 0 - 16
     zoomControl: true,
     zoomControlOptions: {
       style: google.maps.ZoomControlStyle.SMALL,
       position: google.maps.ControlPosition.RIGHT_BOTTOM
     }
   }
-  // Step 4. Use the Map() constructor to create a map and draw the map into the page.
-  // The constructor takes two parameters: (1) The element the map will appear inside
-  // (2) The mapOptions object
+
   var kentStateParkingMap;
   kentStateParkingMap = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-  // AJAX code in JQUERY to get data from the JSON file to populate the Google API
   $.getJSON('index.json', function(data_from_file) {
-    // Implement New infowindow
+
     var infowindow = new google.maps.InfoWindow();
     var marker, i;
 
     $.each(data_from_file, function(key, value) {
-      // The google.maps.Marker() constructor creates a marker object. It takes one parameter:
-      // an object that contains literal notation.
+
       var image = "";
 
       if (value.Available == "Empty") {
@@ -40,7 +32,6 @@ function init() {
       }
 
       var marker = new google.maps.Marker({
-        // Position is the array storing the markers location (parkingLots)
         position: new google.maps.LatLng(value.Latitude, value.Longitude),
         map: kentStateParkingMap,
         icon: image,
@@ -48,7 +39,10 @@ function init() {
         animation: google.maps.Animation.DROP
       });
 
-      // Dynamically populate the Name of the buildings
+      /*
+       * Dynamically populate the Name of the buildings
+       * on to the accordion menu buttons
+       */
       let title = document.getElementsByClassName("parking_btn")[key];
       title.innerHTML = marker.title;
       let text = title.nextElementSibling.lastChild;
@@ -65,14 +59,13 @@ function init() {
           infowindow.setContent(information);
           infowindow.open(kentStateParkingMap, marker);
           let btn = document.getElementsByClassName("parking_content")[key];
-          if (btn.style.maxHeight > "0px") {
+          if (btn.style.maxHeight > "0px" && key === marker) {
             //closed
             btn.style.maxHeight = "0px";
             infowindow.close();
           } else {
             // Open content button
             btn.style.maxHeight = "300px";
-
           }
         }
       })(marker));
