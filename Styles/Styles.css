@@ -34,8 +34,13 @@ a {
   color: white;
 }
 
-#index_header, #index_footer {
-  border: .1em solid black;
+header {
+  height: 120px;
+  border-bottom: 3px solid yellow;
+  z-index: 1;
+}
+
+header, #index_footer {
   background-color: rgb(0, 38, 100);
   width: inherit;
 }
@@ -46,8 +51,6 @@ a {
 }
 
 #index_header {
-  height: 94px;
-  border-bottom: 3px solid yellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,6 +59,22 @@ a {
 .index_logo {
   width: 200px;
   padding: 1em;
+}
+
+.menu_wrapper {}
+
+.menu_content {
+  padding: 1em 0;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu_content>li {
+  cursor: pointer;
+  padding-left: 1em;
 }
 
 #index_footer {
@@ -87,7 +106,9 @@ button.parking_btn {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   margin: .2em 0em;
-  text-align: left;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 button.parking_btn:hover {
@@ -180,6 +201,12 @@ i {
     overflow-x: hidden;
   }
 
+  #hamber_menu {
+    position: relative;
+    top: 3px;
+    right: 25px;
+  }
+
   #map {
     height: 450px;
     width: 100%;
@@ -188,6 +215,10 @@ i {
 
   .content_wrapper {
     display: block;
+  }
+
+  .menu_wrapper, #parking_services {
+    display: none;
   }
 
   nav {

@@ -6,31 +6,26 @@
 <button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
-<p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
 <button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
-<p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
 <button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
-<p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
 <button class="parking_btn"></button>
 <div class="parking_content">
 <p>Availability:</p>
-<p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
 <button class="parking_btn"></button>
 <div class="parking_content" id="window">
 <p>Availability:</p>
-<p>Meters Availabile:</p>
 <p>Address: </p>
 </div>
 <script type="text/javascript" src="jquery.js"></script>
