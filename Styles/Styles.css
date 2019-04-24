@@ -107,6 +107,10 @@ header, #index_footer {
   padding-left: 1em;
 }
 
+.parking_content > p {
+  font-weight: bolder;
+}
+
 
 #index_footer {
   padding-left: 21px;

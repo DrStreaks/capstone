@@ -2,28 +2,28 @@
   <div class="footer_info">
     <ul>
       <li><h4>Information</h4></li>
-      <li><a>Accessibility</a></li>
-      <li><a>Emergency Information</a></li>
-      <li><a>For Our Alumni</a></li>
-      <li><a>For the Media</a></li>
-      <li><a>Jobs & Employment</a></li>
-      <li><a>Life at KSU</a></li>
-      <li><a>Privacy Statement</a></li>
-      <li><a>Tuition</a></li>
-      <li><a>Technology Support</a></li>
-      <li><a>Website Feedback</a></li>
+      <li><a href="#">Accessibility</a></li>
+      <li><a href="#">Emergency Information</a></li>
+      <li><a href="#">For Our Alumni</a></li>
+      <li><a href="#">For the Media</a></li>
+      <li><a href="#">Jobs & Employment</a></li>
+      <li><a href="#">Life at KSU</a></li>
+      <li><a href="#">Privacy Statement</a></li>
+      <li><a href="#">Tuition</a></li>
+      <li><a href="#">Technology Support</a></li>
+      <li><a href="#">Website Feedback</a></li>
     </ul>
   </div>
   <div class="footer_camp_res">
     <ul>
     <li><h4>Campus Resources</h4></li>
-    <li><a>Annual Security Reports</a></li>
-    <li><a>Campus Safety</a></li>
-    <li><a>Commuter Students</a></li>
-    <li><a>Health Services</a></li>
-    <li><a>Off-Campus Students</a></li>
-    <li><a>Student Services</a></li>
-    <li><a>Transportation</a></li>
+    <li><a href="#">Annual Security Reports</a></li>
+    <li><a href="#">Campus Safety</a></li>
+    <li><a href="#">Commuter Students</a></li>
+    <li><a href="#">Health Services</a></li>
+    <li><a href="#">Off-Campus Students</a></li>
+    <li><a href="#">Student Services</a></li>
+    <li><a href="#">Transportation</a></li>
     </ul>
   </div>
   <div class="footer_mail_address">
