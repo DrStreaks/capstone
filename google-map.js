@@ -43,7 +43,7 @@ function init() {
        * Dynamically populate the Name of the buildings
        * on to the accordion menu buttons
        */
-      let title = document.getElementsByClassName("parking_btn")[key];
+      var title = document.getElementsByClassName("parking_btn")[key];
       title.innerHTML = marker.title;
       let text = title.nextElementSibling.lastChild;
       text.nodeValue = value.Address;
@@ -56,21 +56,33 @@ function init() {
        * on the marker and opens the corresponding button and information infowindow
        * for that marker.
        */
+
       google.maps.event.addListener(marker, 'click', (function(marker) {
         return function() {
-          var information = '<h2>'+ value.Name + '</h2>' + value.Address + '<br /> <br />' + 'Is currently: ' + value.Available;
+          var information = '<h2>'+ value.Name + '</h2>' + value.Address +
+          '<br /> <br />' + 'Is currently: ' + value.Available;
           infowindow.setContent(information);
           infowindow.open(kentStateParkingMap, marker);
           let btn = document.getElementsByClassName("parking_content")[key];
           if (btn.style.maxHeight > "0px") {
-            btn.style.maxHeight = "0px";                                                // Close the content button
-            infowindow.close();                                                         // Close the infowindow
+            btn.style.maxHeight = "0px";                                                                              // Close the content button
+            infowindow.close();                                                                                       // Close the infowindow
           } else {
-            btn.style.maxHeight = "300px";                                              // Open the content button
+            btn.style.maxHeight = "300px";                                                                            // Open the content button
             infowindow.open(kentStateParkingMap, marker);
           }
         }
       })(marker));
+
+      title.addEventListener("click", function(){
+        infowindow.open(kentStateParkingMap, marker);
+        if (infowindow.close() == false){
+          infowindow.close();
+        } else {
+        infowindow.open(kentStateParkingMap, marker);
+        }
+      });
+
     });
   });
 }
@@ -86,28 +98,3 @@ function loadScript() {
 
 // Step 1. When the page is loaded, the onload event will call the loadScript() Function
 window.onload = loadScript;
-
-
-/*
-// This function opens and closes the location buttons
-function open_close_nav() {
-  // Navigate the DOM to find the child and get the element
-  var info = this.nextElementSibling;
-  // If the height is greater than 0px than it is OPEN
-  if (info.style.maxHeight > "0px") {
-    // Close the content window
-    info.style.maxHeight = "0px";
-    infowindow.close();
-  } else {
-    // Open content window
-    info.style.maxHeight = info.scrollHeight + "px";
-    infowindow.open(kentStateParkingMap, marker);
-  }
-};
-
-////////////////////////////////////////////////////////////////////////////////
-// Get locations of all parking lots/meters
-var locationsArray = document.getElementsByClassName("parking_btn")[key];
-
-  locationsArray.onclick = open_close_nav();
-*/
