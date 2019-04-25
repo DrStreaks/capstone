@@ -1,6 +1,6 @@
 <div class="content_wrapper">
 <div id="map">
-<script type="text/javascript" src="google-map.js"></script>
+<script type="text/javascript" src="Features\google-map.js"></script>
 </div>
 <nav>
 <button class="parking_btn"></button>
@@ -28,10 +28,8 @@
 <p>Availability:</p>
 <p>Address: </p>
 </div>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="accordion.js"></script>
+<script type="text/javascript" src="Features\jquery.js"></script>
+<script type="text/javascript" src="Features\accordion.js"></script>
 </nav>
-
-
 </div>
 </body>
