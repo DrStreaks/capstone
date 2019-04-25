@@ -250,6 +250,13 @@ i {
     margin-left: auto;
   }
 
+  #hamburger {
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    color: white;
+    content: "/f0c9";
+  }
+
   .content_wrapper {
     display: block;
   }

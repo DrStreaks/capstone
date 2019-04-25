@@ -11,7 +11,7 @@
       <div id="index_header">
         <img class="index_logo" src="Images\kent_state Horizontal_White.png" alt="Kent State Horizontal White Logo">
         <div id="parking_services"><a href="https://www.kent.edu/parking">Parking and Transit Services</a></div>
-        <div id="menu_button">
+        <div id="menu_button" id="hamburger">
           <ul id="menu_button_wrapper">
             <div class="dropdown">
             <li><a href="https://login.kent.edu/"><i class="fas fa-bolt fa-lg"></i></a></li>
