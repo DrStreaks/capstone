@@ -108,11 +108,4 @@
             <li><a href="https://www.kent.edu/parking/ticketsenforcement">Tickets/Enforcement</a></li>
           </ul>
         </span>
-    <header id="index_header">
-        <img class="index_logo" src="Images\kent_state Horizontal_White.png" alt="">
-        <i class="fas fa-bars fa-2x" id="hamber_menu"></i>
     </header>
-    <div id="content_area">
-      <!-- Map Area -->
-      <h2 style="justify-content: center;display: flex;">Content Area</h2>
-    </div>
